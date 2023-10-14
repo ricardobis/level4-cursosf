@@ -1,0 +1,15 @@
+SELECT Id, Name, (SELECT Id, Firstname, LastName FROM Contacts) FROM Account WHERE  Name = 'American Banking Corp.'
+SELECT Id, FirstName, LastName, Account.Id, Account.Name FROM Contact WHERE Account.Name = 'American Banking Corp.'
+SELECT Id, Name, (SELECT Id, Name FROM Applicants__r) FROM Contact WHERE FirstName = 'Ricardo'
+SELECT Contact__r.FirstName, Job_Offer__r.Job_Title__c FROM Applicant__c
+SELECT Account.Name, Id, FirstName FROM Contact WHERE FirstName = 'Andy'
+
+SELECT LeadSource, Count(NAME) FROM Lead GROUP BY LeadSource
+SELECT LeadSource, Count(Name) FROM Lead GROUP BY LeadSource HAVING COUNT(Name) > 100
+SELECT LeadSource, Name, FROM Lead LIMIT 100
+
+
+/* Code Block */
+List<Account> act1 = [SELECT Id, (SELECT LastName FROM Contacts), 
+(SELECT Description FROM Opportunities)
+FROM Account WITH SECURITY_ENFORCED];
