@@ -1,0 +1,10 @@
+Dog cherrie = new Dog();
+cherrie.makeNoise('HUF HUF');
+cherrie.poop();
+
+Cat orus = new Cat();
+orus.makeNoise('MEAW MEAW');
+
+Bird zeCarioca = new Bird();
+zeCarioca.makeNoise('BRRR BRRRR');
+zeCarioca.sleep();

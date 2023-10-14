@@ -1,0 +1,2 @@
+YellowMarker pen = new YellowMarker();
+pen.write();
