@@ -1,0 +1,15 @@
+//get global describe
+System.debug('### global describe' + Schema.getGlobalDescribe());
+//Describe field result
+Schema.DescribeFieldResult dfr = Account.Description.getDescribe();
+System.debug('### Account field describe' + dfr);
+//Limits
+System.debug('### DMLRows' + Limits.getDMLRows());
+//Trigger
+//Trigger.new / Trigger.old
+//Test
+//Test.isRunningTest()
+//Security
+//Security.stripInaccesssible()
+//Exception
+//Exception.getMessage();
